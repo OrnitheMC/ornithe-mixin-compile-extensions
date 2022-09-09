@@ -32,8 +32,8 @@ import org.spongepowered.tools.obfuscation.ObfuscationType;
 import org.spongepowered.tools.obfuscation.mapping.IMappingProvider;
 import org.spongepowered.tools.obfuscation.mapping.IMappingWriter;
 
-public class ObfuscationEnvironmentFabric extends ObfuscationEnvironment {
-	protected ObfuscationEnvironmentFabric(ObfuscationType type) {
+public class ObfuscationEnvironmentOrnithe extends ObfuscationEnvironment {
+	protected ObfuscationEnvironmentOrnithe(ObfuscationType type) {
 		super(type);
 	}
 

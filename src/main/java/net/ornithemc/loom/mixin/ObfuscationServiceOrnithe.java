@@ -34,7 +34,7 @@ import org.spongepowered.tools.obfuscation.interfaces.IMixinAnnotationProcessor;
 import org.spongepowered.tools.obfuscation.service.IObfuscationService;
 import org.spongepowered.tools.obfuscation.service.ObfuscationTypeDescriptor;
 
-public class ObfuscationServiceFabric implements IObfuscationService {
+public class ObfuscationServiceOrnithe implements IObfuscationService {
 	public static final String IN_MAP_FILE = "inMapFile";
 	public static final String IN_MAP_EXTRA_FILES = "inMapExtraFiles";
 	public static final String OUT_MAP_FILE = "outMapFile";
@@ -46,17 +46,17 @@ public class ObfuscationServiceFabric implements IObfuscationService {
 	private ObfuscationTypeDescriptor createObfuscationType(String from, String to) {
 		return new ObfuscationTypeDescriptor(
 			from + ":" + to,
-			asSuffixed(ObfuscationServiceFabric.IN_MAP_FILE, from, to),
-			asSuffixed(ObfuscationServiceFabric.IN_MAP_EXTRA_FILES, from, to),
-			asSuffixed(ObfuscationServiceFabric.OUT_MAP_FILE, from, to),
-			ObfuscationEnvironmentFabric.class
+			asSuffixed(ObfuscationServiceOrnithe.IN_MAP_FILE, from, to),
+			asSuffixed(ObfuscationServiceOrnithe.IN_MAP_EXTRA_FILES, from, to),
+			asSuffixed(ObfuscationServiceOrnithe.OUT_MAP_FILE, from, to),
+			ObfuscationEnvironmentOrnithe.class
 		);
 	}
 
 	private void addSupportedOptions(Set<String> options, String from, String to) {
-		options.add(asSuffixed(ObfuscationServiceFabric.IN_MAP_FILE, from, to));
-		options.add(asSuffixed(ObfuscationServiceFabric.IN_MAP_EXTRA_FILES, from, to));
-		options.add(asSuffixed(ObfuscationServiceFabric.OUT_MAP_FILE, from, to));
+		options.add(asSuffixed(ObfuscationServiceOrnithe.IN_MAP_FILE, from, to));
+		options.add(asSuffixed(ObfuscationServiceOrnithe.IN_MAP_EXTRA_FILES, from, to));
+		options.add(asSuffixed(ObfuscationServiceOrnithe.OUT_MAP_FILE, from, to));
 	}
 
 	@Override
