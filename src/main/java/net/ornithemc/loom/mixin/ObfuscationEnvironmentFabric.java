@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package net.fabricmc.loom.mixin;
+package net.ornithemc.loom.mixin;
 
 import javax.annotation.processing.Filer;
 import javax.annotation.processing.Messager;

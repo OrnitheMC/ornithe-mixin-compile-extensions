@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package net.fabricmc.loom.mixin;
+package net.ornithemc.loom.mixin;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -62,12 +62,12 @@ public class ObfuscationServiceFabric implements IObfuscationService {
 	@Override
 	public Set<String> getSupportedOptions() {
 		Set<String> options = new HashSet<>();
-		addSupportedOptions(options, "official", "intermediary");
+		addSupportedOptions(options, "official", "calamus");
 		addSupportedOptions(options, "official", "named");
-		addSupportedOptions(options, "intermediary", "official");
-		addSupportedOptions(options, "intermediary", "named");
+		addSupportedOptions(options, "calamus", "official");
+		addSupportedOptions(options, "calamus", "named");
 		addSupportedOptions(options, "named", "official");
-		addSupportedOptions(options, "named", "intermediary");
+		addSupportedOptions(options, "named", "calamus");
 		return Collections.unmodifiableSet(options);
 	}
 
@@ -79,12 +79,12 @@ public class ObfuscationServiceFabric implements IObfuscationService {
 	// Hook preserved for Mixin 0.7 backward compatibility
 	public Collection<ObfuscationTypeDescriptor> getObfuscationTypes() {
 		return Arrays.asList(
-				createObfuscationType("official", "intermediary"),
+				createObfuscationType("official", "calamus"),
 				createObfuscationType("official", "named"),
-				createObfuscationType("intermediary", "official"),
-				createObfuscationType("intermediary", "named"),
+				createObfuscationType("calamus", "official"),
+				createObfuscationType("calamus", "named"),
 				createObfuscationType("named", "official"),
-				createObfuscationType("named", "intermediary")
+				createObfuscationType("named", "calamus")
 		);
 	}
 }
